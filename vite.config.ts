@@ -8,8 +8,9 @@ function injectBuiltByScoutPlugin() {
   return {
     name: 'inject-built-by-scout',
     transformIndexHtml(html: string) {
-      // Inject the scout tag script reference
-      const scriptTag = '<script defer src="/scout-tag.js"></script>';
+      // Get base path from environment
+      const base = process.env.VERCEL ? '' : process.env.NODE_ENV === 'production' ? '/igor-chernitskiy-website' : '';
+      const scriptTag = `<script defer src="${base}/scout-tag.js"></script>`;
       
       // Inject the script before the closing body tag
       return html.replace('</body>', scriptTag + '\n  </body>');
@@ -20,7 +21,7 @@ function injectBuiltByScoutPlugin() {
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss(), injectBuiltByScoutPlugin()],
-  base: process.env.NODE_ENV === 'production' ? '/igor-chernitskiy-website/' : '/',
+  base: process.env.VERCEL ? '/' : process.env.NODE_ENV === 'production' ? '/igor-chernitskiy-website/' : '/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
