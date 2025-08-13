@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="Игорь Черницкий — киноклаппер">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#121212"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F2D16B"/>
+      <stop offset="50%" stop-color="#D9B24C"/>
+      <stop offset="100%" stop-color="#B99133"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Rounded background -->
+  <rect x="8" y="8" width="240" height="240" rx="48" fill="url(#bg)"/>
+
+  <!-- Clapperboard body -->
+  <g filter="url(#shadow)">
+    <!-- Bottom slate -->
+    <rect x="44" y="112" width="168" height="92" rx="12" fill="#181818" stroke="#2a2a2a" stroke-width="2"/>
+    <!-- Top clapper (slanted) -->
+    <g transform="translate(44,64)">
+      <path d="M0 32 L160 0 a8 8 0 0 1 9 5 l7 20 a10 10 0 0 1 -6 13 L16 74 a10 10 0 0 1 -12 -6 L-2 42 a10 10 0 0 1 2 -10 z" fill="#1e1e1e" stroke="#2a2a2a" stroke-width="2"/>
+      <!-- Stripes -->
+      <g fill="url(#gold)">
+        <rect x="10" y="18" width="28" height="10" transform="rotate(-12 24 23)" rx="2"/>
+        <rect x="46" y="10" width="28" height="10" transform="rotate(-12 60 15)" rx="2"/>
+        <rect x="82" y="2"  width="28" height="10" transform="rotate(-12 96 7)"  rx="2"/>
+        <rect x="118" y="-6" width="28" height="10" transform="rotate(-12 132 -1)" rx="2"/>
+      </g>
+    </g>
+
+    <!-- Subtle gold accent line on slate -->
+    <rect x="52" y="120" width="152" height="2" fill="url(#gold)" opacity="0.9"/>
+
+    <!-- Initials IC (for readability at small sizes) -->
+    <g fill="url(#gold)" opacity="0.95">
+      <path d="M86 182 L86 148 L94 148 L94 182 Z"/>
+      <path d="M156 148 Q140 148 130 158 Q120 168 120 182 Q120 196 130 206 Q140 216 156 216 Q168 216 178 212 L178 204 Q168 208 156 208 Q146 208 139 201 Q132 194 132 182 Q132 170 139 163 Q146 156 156 156 Q168 156 178 160 L178 152 Q168 148 156 148 Z"/>
+    </g>
+  </g>
+</svg>
