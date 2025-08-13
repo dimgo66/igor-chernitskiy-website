@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Персональный сайт актера Игоря Черницкого",
-  "homepage": "https://dmitriyalekseewich.github.io/igor-chernitskiy-website",
+  "homepage": "https://dimgo66.github.io/igor-chernitskiy-website",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
